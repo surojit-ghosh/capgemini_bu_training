@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap Components Demo - Surojit Ghosh</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body { background: #f7f8fb; color: #18202f; }
+    .section-card { background: #fff; border: 1px solid #e8ebf2; border-radius: 18px; box-shadow: 0 10px 30px rgba(20, 28, 45, .06); }
+    .demo-box { border: 1px solid #edf0f6; border-radius: 14px; padding: 1rem; background: #fbfcff; }
+    .mini-title { font-size: .78rem; text-transform: uppercase; letter-spacing: .08em; color: #6c7587; font-weight: 700; }
+    .custom-tooltip { --bs-tooltip-bg: #111827; --bs-tooltip-color: #fff; }
+    .custom-popover { --bs-popover-border-color: #d7def0; --bs-popover-header-bg: #f1f5ff; --bs-popover-header-color: #1e2a44; }
+  </style>
+</head>
+<body>
+  <main class="container py-4 py-lg-5">
+    <div class="mb-4 text-center">
+      <p class="mini-title mb-2">Bootstrap 5 Components</p>
+      <h1 class="fw-bold mb-2">Spinners, Placeholders, Tooltips, Popovers & Toasts</h1>
+      <p class="text-secondary mb-0">Simple examples for classroom demonstration.</p>
+    </div>
+
+    <section class="section-card p-4 mb-4" id="spinners">
+      <h2 class="h4 fw-bold mb-3">1. Bootstrap Spinners</h2>
+
+      <div class="demo-box mb-3">
+        <p class="mini-title">Border spinner</p>
+        <div class="spinner-border" role="status"><span class="visually-hidden">Loading...</span></div>
+      </div>
+
+      <div class="demo-box mb-3">
+        <p class="mini-title">Growing spinner</p>
+        <div class="spinner-grow" role="status"><span class="visually-hidden">Loading...</span></div>
+      </div>
+
+      <div class="demo-box mb-3">
+        <p class="mini-title">Color variations</p>
+        <div class="d-flex flex-wrap gap-3 align-items-center">
+          <div class="spinner-border text-primary" role="status"><span class="visually-hidden">Loading...</span></div>
+          <div class="spinner-border text-secondary" role="status"><span class="visually-hidden">Loading...</span></div>
+          <div class="spinner-border text-success" role="status"><span class="visually-hidden">Loading...</span></div>
+          <div class="spinner-border text-danger" role="status"><span class="visually-hidden">Loading...</span></div>
+          <div class="spinner-border text-warning" role="status"><span class="visually-hidden">Loading...</span></div>
+          <div class="spinner-border text-info" role="status"><span class="visually-hidden">Loading...</span></div>
+          <div class="spinner-border text-dark" role="status"><span class="visually-hidden">Loading...</span></div>
+        </div>
+      </div>
+
+      <div class="demo-box mb-3">
+        <p class="mini-title">Small size</p>
+        <div class="spinner-border spinner-border-sm me-3" role="status"><span class="visually-hidden">Loading...</span></div>
+        <div class="spinner-grow spinner-grow-sm" role="status"><span class="visually-hidden">Loading...</span></div>
+      </div>
+
+      <div class="demo-box">
+        <p class="mini-title">Spinner inside buttons</p>
+        <button class="btn btn-primary me-2" type="button" disabled>
+          <span class="spinner-border spinner-border-sm me-2" aria-hidden="true"></span>Saving...
+        </button>
+        <button class="btn btn-outline-dark" type="button" disabled>
+          <span class="spinner-grow spinner-grow-sm me-2" aria-hidden="true"></span>Loading...
+        </button>
+      </div>
+    </section>
+
+    <section class="section-card p-4 mb-4" id="placeholders">
+      <h2 class="h4 fw-bold mb-3">2. Bootstrap Placeholders / Skeleton Loading</h2>
+
+      <div class="demo-box mb-3">
+        <p class="mini-title">Card placeholder</p>
+        <div class="card" aria-hidden="true" style="max-width: 22rem;">
+          <div class="bg-secondary-subtle" style="height: 150px;"></div>
+          <div class="card-body">
+            <h5 class="card-title placeholder-glow"><span class="placeholder col-6"></span></h5>
+            <p class="card-text placeholder-glow">
+              <span class="placeholder col-7"></span>
+              <span class="placeholder col-4"></span>
+              <span class="placeholder col-4"></span>
+              <span class="placeholder col-6"></span>
+              <span class="placeholder col-8"></span>
+            </p>
+            <a class="btn btn-primary disabled placeholder col-6" aria-disabled="true"></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="demo-box mb-3">
+        <p class="mini-title">Width variations</p>
+        <p class="placeholder-glow mb-0">
+          <span class="placeholder col-12"></span>
+          <span class="placeholder col-8"></span>
+          <span class="placeholder col-6"></span>
+          <span class="placeholder col-4"></span>
+        </p>
+      </div>
+
+      <div class="demo-box mb-3">
+        <p class="mini-title">Color variations</p>
+        <span class="placeholder col-2 bg-primary"></span>
+        <span class="placeholder col-2 bg-secondary"></span>
+        <span class="placeholder col-2 bg-success"></span>
+        <span class="placeholder col-2 bg-danger"></span>
+        <span class="placeholder col-2 bg-warning"></span>
+        <span class="placeholder col-2 bg-info"></span>
+      </div>
+
+      <div class="demo-box mb-3">
+        <p class="mini-title">Size variations</p>
+        <span class="placeholder col-12 placeholder-lg"></span>
+        <span class="placeholder col-12"></span>
+        <span class="placeholder col-12 placeholder-sm"></span>
+        <span class="placeholder col-12 placeholder-xs"></span>
+      </div>
+
+      <div class="demo-box">
+        <p class="mini-title">Animation variations</p>
+        <p class="placeholder-glow"><span class="placeholder col-12"></span></p>
+        <p class="placeholder-wave mb-0"><span class="placeholder col-12"></span></p>
+      </div>
+    </section>
+
+    <section class="section-card p-4 mb-4" id="tooltips">
+      <h2 class="h4 fw-bold mb-3">3. Bootstrap Tooltips</h2>
+
+      <div class="demo-box mb-3">
+        <p class="mini-title">Placement variations</p>
+        <button type="button" class="btn btn-outline-primary m-1" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Tooltip on top">Top</button>
+        <button type="button" class="btn btn-outline-primary m-1" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Tooltip on right">Right</button>
+        <button type="button" class="btn btn-outline-primary m-1" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Tooltip on bottom">Bottom</button>
+        <button type="button" class="btn btn-outline-primary m-1" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Tooltip on left">Left</button>
+      </div>
+
+      <div class="demo-box mb-3">
+        <p class="mini-title">HTML tooltip</p>
+        <button type="button" class="btn btn-dark" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<strong>Pro tip:</strong> Use tooltips for short help text.">Hover for HTML tooltip</button>
+      </div>
+
+      <div class="demo-box mb-3">
+        <p class="mini-title">Custom tooltip</p>
+        <button type="button" class="btn btn-success" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip" data-bs-title="This tooltip uses a custom class.">Custom tooltip</button>
+      </div>
+
+      <div class="demo-box">
+        <p class="mini-title">Disabled button tooltip using wrapper</p>
+        <span class="d-inline-block" tabindex="0" data-bs-toggle="tooltip" data-bs-title="Disabled buttons need a wrapper for tooltip.">
+          <button class="btn btn-secondary" type="button" disabled>Disabled button</button>
+        </span>
+      </div>
+    </section>
+
+    <section class="section-card p-4 mb-4" id="popovers">
+      <h2 class="h4 fw-bold mb-3">4. Bootstrap Popovers</h2>
+
+      <div class="demo-box mb-3">
+        <p class="mini-title">Basic popover</p>
+        <button type="button" class="btn btn-primary" data-bs-toggle="popover" data-bs-title="Popover title" data-bs-content="This is the popover body content.">Click for popover</button>
+      </div>
+
+      <div class="demo-box mb-3">
+        <p class="mini-title">Placement variations</p>
+        <button type="button" class="btn btn-outline-dark m-1" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Popover on top">Top</button>
+        <button type="button" class="btn btn-outline-dark m-1" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="Popover on right">Right</button>
+        <button type="button" class="btn btn-outline-dark m-1" data-bs-placement="bottom" data-bs-toggle="popover" data-bs-content="Popover on bottom">Bottom</button>
+        <button type="button" class="btn btn-outline-dark m-1" data-bs-placement="left" data-bs-toggle="popover" data-bs-content="Popover on left">Left</button>
+      </div>
+
+      <div class="demo-box mb-3">
+        <p class="mini-title">Dismissible popover</p>
+        <button tabindex="0" class="btn btn-warning" role="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-title="Dismissible" data-bs-content="Click outside or move focus away to dismiss.">Dismissible popover</button>
+      </div>
+
+      <div class="demo-box mb-3">
+        <p class="mini-title">Custom popover</p>
+        <button type="button" class="btn btn-success" data-bs-toggle="popover" data-bs-custom-class="custom-popover" data-bs-title="Custom Popover" data-bs-content="This popover has custom Bootstrap CSS variables.">Custom popover</button>
+      </div>
+
+      <div class="demo-box">
+        <p class="mini-title">Disabled button popover using wrapper</p>
+        <span class="d-inline-block" tabindex="0" data-bs-toggle="popover" data-bs-content="Disabled buttons need a wrapper for popover.">
+          <button class="btn btn-secondary" type="button" disabled>Disabled button</button>
+        </span>
+      </div>
+    </section>
+
+    <section class="section-card p-4 mb-4" id="toasts">
+      <h2 class="h4 fw-bold mb-3">5. Bootstrap Toasts</h2>
+
+      <div class="demo-box mb-3">
+        <p class="mini-title">Live toast</p>
+        <button type="button" class="btn btn-primary" id="liveToastBtn">Show live toast</button>
+        <div class="toast-container position-fixed bottom-0 end-0 p-3">
+          <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+              <strong class="me-auto">Bootstrap</strong>
+              <small>now</small>
+              <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">This is a live toast notification.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="demo-box mb-3">
+        <p class="mini-title">Basic toast shown on page</p>
+        <div class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
+          <div class="toast-header">
+            <strong class="me-auto">Message</strong>
+            <small>2 mins ago</small>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+          </div>
+          <div class="toast-body">Hello, this is a simple toast message.</div>
+        </div>
+      </div>
+
+      <div class="demo-box mb-3">
+        <p class="mini-title">Stacked toasts</p>
+        <div class="toast-container position-static">
+          <div class="toast show mb-2" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header"><strong class="me-auto">Upload</strong><small>now</small><button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button></div>
+            <div class="toast-body">File upload started.</div>
+          </div>
+          <div class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header"><strong class="me-auto">Upload</strong><small>now</small><button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button></div>
+            <div class="toast-body">File upload completed.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="demo-box">
+        <p class="mini-title">Custom content toast</p>
+        <div class="toast show align-items-center text-bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
+          <div class="d-flex">
+            <div class="toast-body">Saved successfully!</div>
+            <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+    [...tooltipTriggerList].map(el => new bootstrap.Tooltip(el));
+
+    const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
+    [...popoverTriggerList].map(el => new bootstrap.Popover(el));
+
+    const toastTrigger = document.getElementById('liveToastBtn');
+    const liveToast = document.getElementById('liveToast');
+    if (toastTrigger) {
+      const toastBootstrap = bootstrap.Toast.getOrCreateInstance(liveToast);
+      toastTrigger.addEventListener('click', () => toastBootstrap.show());
+    }
+  </script>
+</body>
+</html>

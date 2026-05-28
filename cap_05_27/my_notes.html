@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Surojit Teaching Notes - Bootstrap Components</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body { background: #f7f8fb; color: #18202f; }
+    .note-card { background: #fff; border: 1px solid #e8ebf2; border-radius: 18px; box-shadow: 0 10px 30px rgba(20, 28, 45, .06); }
+    .speak { background: #f8fbff; border-left: 4px solid #0d6efd; border-radius: 12px; padding: 1rem; }
+    .demo-ref { background: #f7f7f9; border: 1px dashed #ced4da; border-radius: 12px; padding: .8rem; }
+    pre { background: #111827; color: #eef2ff; padding: 1rem; border-radius: 14px; overflow-x: auto; font-size: .88rem; }
+    code { color: inherit; }
+    .mini-title { font-size: .78rem; text-transform: uppercase; letter-spacing: .08em; color: #6c7587; font-weight: 700; }
+    .custom-tooltip { --bs-tooltip-bg: #111827; --bs-tooltip-color: #fff; }
+    .custom-popover { --bs-popover-border-color: #d7def0; --bs-popover-header-bg: #f1f5ff; --bs-popover-header-color: #1e2a44; }
+  </style>
+</head>
+<body>
+  <main class="container py-4 py-lg-5">
+    <div class="mb-4 text-center">
+      <p class="mini-title mb-2">Surojit Ghosh</p>
+      <h1 class="fw-bold mb-2">My Bootstrap Teaching Notes</h1>
+      <p class="text-secondary mb-0">These notes are directly related to the student demo file.</p>
+    </div>
+
+    <section class="note-card p-4 mb-4">
+      <h2 class="h4 fw-bold">How I will start</h2>
+      <div class="speak mt-3">
+        <strong>I will say:</strong>
+        <p class="mb-0">Today I am teaching five Bootstrap components: Spinners, Placeholders, Tooltips, Popovers, and Toasts. These are used when the website is loading something, giving small hints, showing extra information, or notifying the user after an action.</p>
+      </div>
+      <div class="demo-ref mt-3">
+        <strong>Demo file relation:</strong> The student demo has five sections in the same order. I should explain each section, then show the code pattern.
+      </div>
+    </section>
+
+    <section class="note-card p-4 mb-4" id="notes-spinners">
+      <h2 class="h4 fw-bold">1. Bootstrap Spinners</h2>
+      <div class="demo-ref my-3"><strong>Related demo section:</strong> Student demo → “1. Bootstrap Spinners”</div>
+      <div class="speak mb-3">
+        <strong>I will say:</strong>
+        <p>Spinners are loading indicators. They tell users that something is still processing. Bootstrap gives two main types: border spinner and growing spinner.</p>
+      </div>
+      <h3 class="h6 fw-bold">Bootstrap variations covered in demo</h3>
+      <ul>
+        <li><code>.spinner-border</code> → normal circular border loader</li>
+        <li><code>.spinner-grow</code> → growing/fading loader</li>
+        <li>Color utilities → <code>.text-primary</code>, <code>.text-success</code>, <code>.text-danger</code>, etc.</li>
+        <li>Small size → <code>.spinner-border-sm</code>, <code>.spinner-grow-sm</code></li>
+        <li>Button loader → spinner inside button</li>
+        <li>Accessibility → <code>role="status"</code> and <code>.visually-hidden</code></li>
+      </ul>
+      <h3 class="h6 fw-bold">Code I should explain</h3>
+      <pre><code>&lt;div class="spinner-border text-primary" role="status"&gt;
+  &lt;span class="visually-hidden"&gt;Loading...&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+      <h3 class="h6 fw-bold">Real-world examples not shown in demo</h3>
+      <ul>
+        <li><strong>Payment processing:</strong> show a spinner on “Pay Now” after user clicks, so they do not click multiple times.</li>
+        <li><strong>Search loading:</strong> show spinner while products, jobs, or users are being fetched from the server.</li>
+      </ul>
+      <h3 class="h6 fw-bold">Question I can ask students</h3>
+      <p>Where should we show a spinner in a real website: before data loads or after data is already visible?</p>
+    </section>
+
+    <section class="note-card p-4 mb-4" id="notes-placeholders">
+      <h2 class="h4 fw-bold">2. Bootstrap Placeholders / Skeleton Loading</h2>
+      <div class="demo-ref my-3"><strong>Related demo section:</strong> Student demo → “2. Bootstrap Placeholders / Skeleton Loading”</div>
+      <div class="speak mb-3">
+        <strong>I will say:</strong>
+        <p>Placeholders are skeleton screens. They are better than blank screens because the user gets an idea of the page layout while data is loading.</p>
+      </div>
+      <h3 class="h6 fw-bold">Bootstrap variations covered in demo</h3>
+      <ul>
+        <li>Card skeleton using <code>.placeholder</code></li>
+        <li>Width using grid columns → <code>.col-12</code>, <code>.col-8</code>, <code>.col-6</code>, <code>.col-4</code></li>
+        <li>Colors using background utilities → <code>.bg-primary</code>, <code>.bg-success</code>, etc.</li>
+        <li>Sizes → <code>.placeholder-lg</code>, default, <code>.placeholder-sm</code>, <code>.placeholder-xs</code></li>
+        <li>Animations → <code>.placeholder-glow</code> and <code>.placeholder-wave</code></li>
+        <li>Disabled placeholder button using <code>.disabled</code></li>
+      </ul>
+      <h3 class="h6 fw-bold">Code I should explain</h3>
+      <pre><code>&lt;p class="placeholder-glow"&gt;
+  &lt;span class="placeholder col-7"&gt;&lt;/span&gt;
+  &lt;span class="placeholder col-4"&gt;&lt;/span&gt;
+  &lt;span class="placeholder col-6"&gt;&lt;/span&gt;
+&lt;/p&gt;</code></pre>
+      <h3 class="h6 fw-bold">Real-world examples not shown in demo</h3>
+      <ul>
+        <li><strong>Instagram/LinkedIn feed:</strong> show skeleton cards before posts appear.</li>
+        <li><strong>Dashboard analytics:</strong> show placeholder blocks while charts and numbers load from API.</li>
+      </ul>
+      <h3 class="h6 fw-bold">Question I can ask students</h3>
+      <p>Why is a placeholder sometimes better than a spinner for large content areas?</p>
+    </section>
+
+    <section class="note-card p-4 mb-4" id="notes-tooltips">
+      <h2 class="h4 fw-bold">3. Bootstrap Tooltips</h2>
+      <div class="demo-ref my-3"><strong>Related demo section:</strong> Student demo → “3. Bootstrap Tooltips”</div>
+      <div class="speak mb-3">
+        <strong>I will say:</strong>
+        <p>Tooltips are small help messages. They are best for short text, like explaining an icon or a form field. They need Bootstrap JavaScript initialization.</p>
+      </div>
+      <h3 class="h6 fw-bold">Bootstrap variations covered in demo</h3>
+      <ul>
+        <li>Placements → top, right, bottom, left using <code>data-bs-placement</code></li>
+        <li>Tooltip text using <code>data-bs-title</code></li>
+        <li>HTML tooltip using <code>data-bs-html="true"</code></li>
+        <li>Custom tooltip using <code>data-bs-custom-class</code></li>
+        <li>Disabled button tooltip using wrapper with <code>tabindex="0"</code></li>
+        <li>JavaScript initialization using <code>new bootstrap.Tooltip()</code></li>
+      </ul>
+      <h3 class="h6 fw-bold">Code I should explain</h3>
+      <pre><code>&lt;button class="btn btn-outline-primary"
+  data-bs-toggle="tooltip"
+  data-bs-placement="top"
+  data-bs-title="Tooltip on top"&gt;
+  Top
+&lt;/button&gt;</code></pre>
+      <pre><code>const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+[...tooltipTriggerList].map(el =&gt; new bootstrap.Tooltip(el));</code></pre>
+      <h3 class="h6 fw-bold">Real-world examples not shown in demo</h3>
+      <ul>
+        <li><strong>Password info:</strong> show “Use 8+ characters with number and symbol” near an info icon.</li>
+        <li><strong>Dashboard icons:</strong> show “Revenue”, “Orders”, or “Pending” explanation when hovering over small icons.</li>
+      </ul>
+      <h3 class="h6 fw-bold">Question I can ask students</h3>
+      <p>Should we put long paragraphs inside tooltips? Why or why not?</p>
+    </section>
+
+    <section class="note-card p-4 mb-4" id="notes-popovers">
+      <h2 class="h4 fw-bold">4. Bootstrap Popovers</h2>
+      <div class="demo-ref my-3"><strong>Related demo section:</strong> Student demo → “4. Bootstrap Popovers”</div>
+      <div class="speak mb-3">
+        <strong>I will say:</strong>
+        <p>Popovers are like bigger tooltips. They can have a title and body content. Use them when the user needs more explanation, but we do not want to open a full modal.</p>
+      </div>
+      <h3 class="h6 fw-bold">Bootstrap variations covered in demo</h3>
+      <ul>
+        <li>Basic popover using <code>data-bs-toggle="popover"</code></li>
+        <li>Title using <code>data-bs-title</code></li>
+        <li>Body using <code>data-bs-content</code></li>
+        <li>Placements → top, right, bottom, left</li>
+        <li>Dismissible popover using <code>data-bs-trigger="focus"</code></li>
+        <li>Custom popover using <code>data-bs-custom-class</code></li>
+        <li>Disabled button popover using wrapper with <code>tabindex="0"</code></li>
+        <li>JavaScript initialization using <code>new bootstrap.Popover()</code></li>
+      </ul>
+      <h3 class="h6 fw-bold">Code I should explain</h3>
+      <pre><code>&lt;button class="btn btn-primary"
+  data-bs-toggle="popover"
+  data-bs-title="Popover title"
+  data-bs-content="This is the popover body content."&gt;
+  Click for popover
+&lt;/button&gt;</code></pre>
+      <pre><code>const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
+[...popoverTriggerList].map(el =&gt; new bootstrap.Popover(el));</code></pre>
+      <h3 class="h6 fw-bold">Real-world examples not shown in demo</h3>
+      <ul>
+        <li><strong>Pricing page:</strong> explain what “Enterprise plan” includes when user clicks an info button.</li>
+        <li><strong>Form help:</strong> explain what documents are accepted for upload without leaving the page.</li>
+      </ul>
+      <h3 class="h6 fw-bold">Question I can ask students</h3>
+      <p>When should we use a popover instead of a tooltip?</p>
+    </section>
+
+    <section class="note-card p-4 mb-4" id="notes-toasts">
+      <h2 class="h4 fw-bold">5. Bootstrap Toasts</h2>
+      <div class="demo-ref my-3"><strong>Related demo section:</strong> Student demo → “5. Bootstrap Toasts”</div>
+      <div class="speak mb-3">
+        <strong>I will say:</strong>
+        <p>Toasts are small notifications. They are used after an action, like save, delete, upload, message sent, or error. They do not block the page like modals.</p>
+      </div>
+      <h3 class="h6 fw-bold">Bootstrap variations covered in demo</h3>
+      <ul>
+        <li>Live toast triggered by button</li>
+        <li>Basic toast using <code>.toast</code> and <code>.toast-header</code></li>
+        <li>Toast body using <code>.toast-body</code></li>
+        <li>Close button using <code>data-bs-dismiss="toast"</code></li>
+        <li>Positioning using <code>.toast-container</code>, <code>.position-fixed</code>, <code>.bottom-0</code>, <code>.end-0</code></li>
+        <li>Stacked toasts inside <code>.toast-container</code></li>
+        <li>Custom content toast using <code>.text-bg-success</code> and <code>.d-flex</code></li>
+        <li>JavaScript trigger using <code>bootstrap.Toast.getOrCreateInstance()</code></li>
+      </ul>
+      <h3 class="h6 fw-bold">Code I should explain</h3>
+      <pre><code>&lt;button type="button" class="btn btn-primary" id="liveToastBtn"&gt;Show live toast&lt;/button&gt;
+
+&lt;div class="toast-container position-fixed bottom-0 end-0 p-3"&gt;
+  &lt;div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true"&gt;
+    &lt;div class="toast-header"&gt;
+      &lt;strong class="me-auto"&gt;Bootstrap&lt;/strong&gt;
+      &lt;button type="button" class="btn-close" data-bs-dismiss="toast"&gt;&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class="toast-body"&gt;This is a live toast notification.&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+      <pre><code>const toastTrigger = document.getElementById('liveToastBtn');
+const liveToast = document.getElementById('liveToast');
+const toastBootstrap = bootstrap.Toast.getOrCreateInstance(liveToast);
+toastTrigger.addEventListener('click', () =&gt; toastBootstrap.show());</code></pre>
+      <h3 class="h6 fw-bold">Real-world examples not shown in demo</h3>
+      <ul>
+        <li><strong>E-commerce:</strong> show “Item added to cart” after the user clicks Add to Cart.</li>
+        <li><strong>Admin dashboard:</strong> show “User deleted successfully” or “Settings saved” after an action.</li>
+      </ul>
+      <h3 class="h6 fw-bold">Question I can ask students</h3>
+      <p>Why is a toast better than an alert for temporary success messages?</p>
+    </section>
+
+    <section class="note-card p-4 mb-4">
+      <h2 class="h4 fw-bold">Final recap I can say</h2>
+      <div class="speak mt-3">
+        <p class="mb-0">Spinners show loading. Placeholders show the shape of content while loading. Tooltips explain small things. Popovers explain bigger things. Toasts notify the user after an action. These components improve user experience because users always know what is happening.</p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

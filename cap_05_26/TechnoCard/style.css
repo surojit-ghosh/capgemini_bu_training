@@ -1,0 +1,32 @@
+.header-right h3 {
+    font-weight: 500;
+    max-width: 300px;
+    align-self: flex-end;
+    text-align: center;
+
+}
+
+.content {
+    margin-top: 32px;
+}
+
+.right-content {
+    flex: 1;
+}
+
+.skills {
+    margin-top: 0;
+}
+
+.qr {
+    padding: 16px;
+}
+
+.qr h3 {
+    font-weight: 500;
+}
+
+.qr-code {
+    width: 150px;
+    height: 150px;
+}
