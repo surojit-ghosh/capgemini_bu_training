@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Minimal Blog Layout</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-50 text-slate-900">
+  <header class="sticky top-0 z-10 bg-white/90 backdrop-blur border-b border-slate-200">
+    <div class="mx-auto max-w-6xl px-5 py-4 flex items-center justify-between">
+      <div class="text-sm font-semibold tracking-wide">MINI BLOG</div>
+      <nav class="text-sm text-slate-600 flex gap-4">
+        <a class="hover:text-slate-900" href="#">Home</a>
+        <a class="hover:text-slate-900" href="#">Topics</a>
+        <a class="hover:text-slate-900" href="#">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="mx-auto max-w-6xl px-5 py-10">
+    <section class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <article class="bg-white border border-slate-200 rounded-xl overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1471879832106-c7ab9e0cee23?auto=format&fit=crop&w=800&q=80" alt="Post" class="h-40 w-full object-cover">
+        <div class="p-5">
+          <h3 class="text-lg font-semibold">Spacing that breathes</h3>
+          <p class="mt-2 text-sm text-slate-600">Why 4/8pt systems keep teams aligned.</p>
+        </div>
+      </article>
+      <article class="bg-white border border-slate-200 rounded-xl overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80" alt="Post" class="h-40 w-full object-cover">
+        <div class="p-5">
+          <h3 class="text-lg font-semibold">Type scales in practice</h3>
+          <p class="mt-2 text-sm text-slate-600">Using clamp() for fluid headings.</p>
+        </div>
+      </article>
+      <article class="bg-white border border-slate-200 rounded-xl overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1487014679447-9f8336841d58?auto=format&fit=crop&w=800&q=80" alt="Post" class="h-40 w-full object-cover">
+        <div class="p-5">
+          <h3 class="text-lg font-semibold">Grids for content teams</h3>
+          <p class="mt-2 text-sm text-slate-600">From 3 columns to 1 cleanly.</p>
+        </div>
+      </article>
+      <article class="bg-white border border-slate-200 rounded-xl overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=800&q=80" alt="Post" class="h-40 w-full object-cover">
+        <div class="p-5">
+          <h3 class="text-lg font-semibold">Object-fit essentials</h3>
+          <p class="mt-2 text-sm text-slate-600">Keep thumbnails tidy every time.</p>
+        </div>
+      </article>
+      <article class="bg-white border border-slate-200 rounded-xl overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1517148815978-75f6acaaf32c?auto=format&fit=crop&w=800&q=80" alt="Post" class="h-40 w-full object-cover">
+        <div class="p-5">
+          <h3 class="text-lg font-semibold">Sticky nav basics</h3>
+          <p class="mt-2 text-sm text-slate-600">Usable headers without noise.</p>
+        </div>
+      </article>
+      <article class="bg-white border border-slate-200 rounded-xl overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7?auto=format&fit=crop&w=800&q=80" alt="Post" class="h-40 w-full object-cover">
+        <div class="p-5">
+          <h3 class="text-lg font-semibold">Layout spacing system</h3>
+          <p class="mt-2 text-sm text-slate-600">A simple margin rhythm.</p>
+        </div>
+      </article>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Animated Landing Hero</title>
+<style>
+  /* Hallmark · pre-emit critique: P4 H4 E4 S4 R4 V4 */
+  :root {
+    --color-bg-1: #0c111c;
+    --color-bg-2: #121827;
+    --color-ink: #f8fafc;
+    --color-ink-soft: #cbd5f5;
+    --color-accent: #7dd3fc;
+    --color-accent-2: #a78bfa;
+    --color-border: rgba(255, 255, 255, 0.14);
+    --color-glow-1: rgba(56, 189, 248, 0.22);
+    --font-display: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    --font-body: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    overflow-x: clip;
+  }
+
+  body {
+    min-height: 100vh;
+    color: var(--color-ink);
+    background: linear-gradient(135deg, var(--color-bg-1), var(--color-bg-2));
+    font-family: var(--font-body);
+  }
+
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 24px;
+    overflow: hidden;
+  }
+
+  .glow {
+    position: absolute;
+    border-radius: 999px;
+    filter: blur(70px);
+    opacity: 0.65;
+    animation: glowPulse 10s ease-in-out infinite;
+  }
+
+  .glow.one {
+    width: 360px;
+    height: 360px;
+    background: var(--color-glow-1);
+    top: -160px;
+    right: -120px;
+  }
+
+  .hero-inner {
+    position: relative;
+    z-index: 1;
+    width: min(900px, 100%);
+    display: grid;
+    gap: 28px;
+    justify-items: start;
+  }
+
+  .eyebrow {
+    font-size: 12px;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--color-ink-soft);
+  }
+
+  h1 {
+    margin: 14px 0 0;
+    font-family: var(--font-display);
+    font-size: clamp(2.4rem, 3.8vw, 3.8rem);
+    line-height: 1.06;
+    overflow-wrap: anywhere;
+    min-width: 0;
+  }
+
+  .shine {
+    display: inline-block;
+    background: linear-gradient(90deg, var(--color-accent), var(--color-accent-2));
+    -webkit-background-clip: text;
+    color: transparent;
+    background-size: 200% 200%;
+    animation: shimmer 6s ease-in-out infinite;
+  }
+
+  .lead {
+    margin: 18px 0 0;
+    color: var(--color-ink-soft);
+    font-size: clamp(1rem, 1.4vw, 1.1rem);
+    max-width: 520px;
+  }
+
+  .cta-row {
+    margin-top: 28px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+
+  .btn {
+    border-radius: 999px;
+    padding: 12px 22px;
+    font-size: 14px;
+    font-weight: 600;
+    border: 1px solid var(--color-border);
+    background: transparent;
+    color: var(--color-ink);
+    cursor: pointer;
+    transition: transform 0.2s ease, border 0.2s ease, background 0.2s ease;
+  }
+
+  .btn:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+  }
+
+  .btn.primary {
+    background: linear-gradient(90deg, var(--color-accent), var(--color-accent-2));
+    border: none;
+    color: #0b1120;
+  }
+
+  .btn:hover {
+    transform: translateY(-2px);
+  }
+
+  .meta {
+    margin-top: 22px;
+    color: var(--color-ink-soft);
+    font-size: 13px;
+  }
+
+  @keyframes glowPulse {
+    0%, 100% { opacity: 0.45; transform: scale(1); }
+    50% { opacity: 0.8; transform: scale(1.08); }
+  }
+
+  @keyframes shimmer {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  @media (max-width: 480px) {
+    .cta-row {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  }
+</style>
+</head>
+<body>
+  <section class="hero">
+    <div class="glow one" aria-hidden="true"></div>
+
+    <div class="hero-inner">
+      <div>
+        <div class="eyebrow">Atlas Studio</div>
+        <h1>
+          Shape a hero that breathes with
+          <span class="shine">motion-driven clarity</span>
+        </h1>
+        <p class="lead">
+          A modern landing hero built on gradients, layered glass, and thoughtful animations. Everything scales with your message, not against it.
+        </p>
+        <div class="cta-row">
+          <button class="btn primary" type="button">Start building</button>
+          <button class="btn" type="button">Explore the kit</button>
+        </div>
+        <div class="meta">Motion-first hero kit · Gradient overlays · Responsive type scale</div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
