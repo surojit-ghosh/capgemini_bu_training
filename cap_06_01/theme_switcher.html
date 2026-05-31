@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SaaS Theme Switcher (Fixed)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="group/theme m-0 p-0 font-sans">
+
+    <input type="checkbox" id="theme-toggle" class="hidden" />
+
+    <div class="min-h-screen transition-colors duration-500 bg-gray-50 text-gray-900 group-has-[:checked]/theme:bg-gray-900 group-has-[:checked]/theme:text-white">
+        
+        <header class="px-8 py-4 flex justify-between items-center transition-colors duration-500 border-b border-gray-200 bg-white group-has-[:checked]/theme:border-gray-800 group-has-[:checked]/theme:bg-gray-950">
+            <div class="font-bold text-xl tracking-tight">SaaSify</div>
+            
+            <label for="theme-toggle" class="relative inline-flex items-center cursor-pointer">
+                <div class="w-11 h-6 rounded-full transition-colors duration-300 bg-gray-200 group-has-[:checked]/theme:bg-indigo-600"></div>
+                <div class="absolute left-1 top-1 w-4 h-4 rounded-full transition-transform duration-300 shadow-sm bg-white group-has-[:checked]/theme:translate-x-5"></div>
+            </label>
+        </header>
+
+        <main class="max-w-3xl mx-auto mt-12 p-8 rounded-2xl shadow-sm border transition-colors duration-500 bg-white border-gray-100 group-has-[:checked]/theme:bg-gray-800 group-has-[:checked]/theme:border-gray-700">
+            <h1 class="text-3xl font-bold mb-4">Welcome to your dashboard</h1>
+            <p class="mb-8 transition-colors duration-500 text-gray-500 group-has-[:checked]/theme:text-gray-400">
+                This layout now toggles seamlessly between light and dark modes using Tailwind's <code>group-has-[:checked]</code> modifier. It penetrates deeply nested HTML tags without failing.
+            </p>
+            
+            <div class="grid grid-cols-2 gap-4">
+                <div class="p-6 rounded-xl transition-colors duration-500 bg-gray-50 group-has-[:checked]/theme:bg-gray-900">
+                    <div class="text-sm transition-colors duration-500 text-gray-500 group-has-[:checked]/theme:text-gray-400">Total Revenue</div>
+                    <div class="text-2xl font-bold mt-1">$45,231</div>
+                </div>
+                <div class="p-6 rounded-xl transition-colors duration-500 bg-gray-50 group-has-[:checked]/theme:bg-gray-900">
+                    <div class="text-sm transition-colors duration-500 text-gray-500 group-has-[:checked]/theme:text-gray-400">Active Users</div>
+                    <div class="text-2xl font-bold mt-1">2,491</div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>
