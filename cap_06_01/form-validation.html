@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Form Validation</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 500px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      box-sizing: border-box;
+    }
+
+    .error {
+      color: red;
+      font-size: 14px;
+      display: block;
+      margin-top: 4px;
+    }
+
+    button {
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>User Registration Form</h2>
+
+  <form id="userForm">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" id="name" />
+      <span class="error" id="nameError"></span>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="text" id="email" />
+      <span class="error" id="emailError"></span>
+    </div>
+
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" id="password" />
+      <span class="error" id="passwordError"></span>
+    </div>
+
+    <div class="form-group">
+      <label for="age">Age</label>
+      <input type="number" id="age" />
+      <span class="error" id="ageError"></span>
+    </div>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <script>
+    const form = document.getElementById("userForm");
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const password = document.getElementById("password").value.trim();
+      const age = document.getElementById("age").value.trim();
+
+      document.getElementById("nameError").textContent = "";
+      document.getElementById("emailError").textContent = "";
+      document.getElementById("passwordError").textContent = "";
+      document.getElementById("ageError").textContent = "";
+
+      let isValid = true;
+
+      if (name.length < 3) {
+        document.getElementById("nameError").textContent =
+          "Name must be at least 3 characters";
+        isValid = false;
+      }
+
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      if (!emailRegex.test(email)) {
+        document.getElementById("emailError").textContent =
+          "Enter a valid email address";
+        isValid = false;
+      }
+
+      if (password.length < 8) {
+        document.getElementById("passwordError").textContent =
+          "Password must be at least 8 characters";
+        isValid = false;
+      }
+
+      if (Number(age) < 18) {
+        document.getElementById("ageError").textContent =
+          "Age must be 18 or above";
+        isValid = false;
+      }
+
+      if (isValid) {
+        const formData = {
+          name,
+          email,
+          password,
+          age
+        };
+
+        console.log("Form Submitted:", formData);
+
+        alert("Form submitted successfully!");
+
+        form.reset();
+      }
+    });
+  </script>
+
+</body>
+</html>
