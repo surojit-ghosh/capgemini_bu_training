@@ -1,7 +1,11 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 FOLDER_NAME="cap_$(date +%m)_$(date +%d)"
+
+echo "Removing existing node_modules folders under: $SCRIPT_DIR"
+find "$SCRIPT_DIR" -type d -name node_modules -prune -exec rm -rf {} +
 
 echo "Creating folder: $FOLDER_NAME"
 mkdir -p "$FOLDER_NAME"
