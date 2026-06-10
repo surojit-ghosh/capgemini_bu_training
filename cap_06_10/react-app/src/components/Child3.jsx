@@ -1,9 +1,9 @@
 import Child4 from "./Child4";
 
-const Child3 = ({ theme }) => {
+const Child3 = () => {
   return (
-    <div className={`p-4 bg-blue-200`}>
-      <Child4 theme={theme} />
+    <div className="p-4 bg-blue-200">
+      <Child4 />
     </div>
   );
 };
