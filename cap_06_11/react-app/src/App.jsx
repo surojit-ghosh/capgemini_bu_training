@@ -1,5 +1,7 @@
+import CrudApp from "./modules/crud-app/CrudApp";
+
 function App() {
-  return <h1 className="text-3xl font-bold underline">Hello world</h1>
+  return <CrudApp />;
 }
 
 export default App

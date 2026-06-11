@@ -1,0 +1,34 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Ramu Kaka",
+      "email": "ramu@chop.corner",
+      "role": "Chef"
+    },
+    {
+      "name": "Surojit Da",
+      "email": "surojit@code.com",
+      "role": "Developerr",
+      "id": 2
+    },
+    {
+      "id": 3,
+      "name": "Puchka Wali",
+      "email": "puchka@street.food",
+      "role": "Vendor"
+    },
+    {
+      "name": "Surojit Da",
+      "email": "surojit@test.com",
+      "role": "Developer",
+      "id": 5
+    },
+    {
+      "name": "Surojit Ghosh",
+      "email": "surojit@cyberpeakitsolutions.com",
+      "role": " dev",
+      "id": 6
+    }
+  ]
+}
