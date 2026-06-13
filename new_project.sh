@@ -45,4 +45,4 @@ EOF
 echo ""
 echo "Done! Running cd $FOLDER_NAME/react-app && npm run dev"
 
-cd cap_06_09/react-app && npm run dev
+cd ./$FOLDER_NAME/react-app && npm run dev
