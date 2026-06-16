@@ -1,5 +1,5 @@
-import { useMemo } from 'react';
-import { filterRequests, sortRequests } from '../lib/utils';
+import { useMemo } from "react";
+import { filterRequests, sortRequests } from "../lib/utils";
 
 export function useRequestFilters(requests, searchText, statusFilter, sortBy) {
   return useMemo(() => {

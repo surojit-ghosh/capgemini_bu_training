@@ -1,9 +1,10 @@
 import React, { useMemo } from "react";
+import { STATUSES } from "../lib/constants";
 
 const CARDS = [
   { key: "total", label: "Total", borderCls: "border-l-neutral-900", filter: () => true },
-  { key: "open", label: "Open", borderCls: "border-l-neutral-700", filter: (r) => r.status === "Open" },
-  { key: "resolved", label: "Resolved", borderCls: "border-l-neutral-400", filter: (r) => r.status === "Resolved" },
+  { key: "open", label: "Open", borderCls: "border-l-neutral-700", filter: (r) => r.status === STATUSES.OPEN },
+  { key: "resolved", label: "Resolved", borderCls: "border-l-neutral-400", filter: (r) => r.status === STATUSES.RESOLVED },
   { key: "high", label: "High Priority", borderCls: "border-l-neutral-200", filter: (r) => r.priority === "High" },
 ];
 
