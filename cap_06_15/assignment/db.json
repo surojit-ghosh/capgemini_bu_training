@@ -1,0 +1,124 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Aarav Sharma",
+      "email": "aarav@student.com",
+      "password": "1234",
+      "role": "student",
+      "roomNo": "A-101"
+    },
+    {
+      "id": 2,
+      "name": "Diya Patel",
+      "email": "diya@student.com",
+      "password": "1234",
+      "role": "student",
+      "roomNo": "B-204"
+    },
+    {
+      "id": 3,
+      "name": "Warden Meera Nair",
+      "email": "warden@hostel.com",
+      "password": "admin123",
+      "role": "admin",
+      "roomNo": "-"
+    }
+  ],
+  "requests": [
+    {
+      "id": 1,
+      "title": "Air Conditioner blowing hot air",
+      "description": "The split AC in room A-101 starts but only blows hot room-temperature air. Looks like the compressor is not turning on.",
+      "category": "Electrical",
+      "roomNo": "A-101",
+      "studentId": 1,
+      "studentName": "Aarav Sharma",
+      "priority": "High",
+      "status": "In Progress",
+      "createdAt": "2026-06-12"
+    },
+    {
+      "id": 2,
+      "title": "Study table chair leg broken",
+      "description": "One of the wooden legs of the study table chair is cracked and completely unstable to sit on. Needs immediate replacement or repair.",
+      "category": "Furniture",
+      "roomNo": "B-204",
+      "studentId": 2,
+      "studentName": "Diya Patel",
+      "priority": "Medium",
+      "status": "Open",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": 3,
+      "title": "Bathroom shower tap leaking",
+      "description": "The hot water shower tap in room B-204 bathroom does not close fully and has a continuous steady leak, wasting a lot of water.",
+      "category": "Plumbing",
+      "roomNo": "B-204",
+      "studentId": 2,
+      "studentName": "Diya Patel",
+      "priority": "Medium",
+      "status": "Resolved",
+      "createdAt": "2026-06-10"
+    },
+    {
+      "id": 4,
+      "title": "Wi-Fi connection drops frequently",
+      "description": "The hostel Wi-Fi router on the 1st floor drops connectivity every few minutes, making it impossible to attend online lectures.",
+      "category": "Internet",
+      "roomNo": "A-101",
+      "studentId": 1,
+      "studentName": "Aarav Sharma",
+      "priority": "High",
+      "status": "Open",
+      "createdAt": "2026-06-13"
+    },
+    {
+      "id": 5,
+      "title": "Corridor light bulbs flickering",
+      "description": "The ceiling tube light right outside room A-101 has been flickering constantly. It causes a lot of eye strain at night.",
+      "category": "Electrical",
+      "roomNo": "A-101",
+      "studentId": 1,
+      "studentName": "Aarav Sharma",
+      "priority": "Low",
+      "status": "Resolved",
+      "createdAt": "2026-06-08"
+    },
+    {
+      "id": 6,
+      "title": "Deep clean requested for floor balcony",
+      "description": "The common balcony area on the second floor has accumulated a lot of dust and fallen leaves over the past week.",
+      "category": "Cleaning",
+      "roomNo": "B-204",
+      "studentId": 2,
+      "studentName": "Diya Patel",
+      "priority": "Low",
+      "status": "Open",
+      "createdAt": "2026-06-14"
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Electrical"
+    },
+    {
+      "id": 2,
+      "name": "Plumbing"
+    },
+    {
+      "id": 3,
+      "name": "Cleaning"
+    },
+    {
+      "id": 4,
+      "name": "Furniture"
+    },
+    {
+      "id": 5,
+      "name": "Internet"
+    }
+  ]
+}

@@ -1,16 +1,62 @@
-# React + Vite
+# Smart Hostel Maintenance Portal
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A dashboard-based web app where students raise maintenance complaints and admins/wardens track, manage, and resolve them.
 
-Currently, two official plugins are available:
+## Setup
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+```bash
+npm install
 
-## React Compiler
+# Terminal 1 — Mock backend
+npx json-server --watch db.json --port 5000
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+# Terminal 2 — Frontend
+npm run dev
+```
 
-## Expanding the ESLint configuration
+## Login Credentials
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+| Role               | Email             | Password |
+| ------------------ | ----------------- | -------- |
+| Student (Aarav)    | aarav@student.com | 1234     |
+| Student (Diya)     | diya@student.com  | 1234     |
+| Admin (Warden)     | warden@hostel.com | admin123 |
+
+## Folder Structure
+
+```
+src/
+├── api/              # Axios instance
+├── context/          # AuthContext, RequestContext
+├── hooks/            # useFetch, useRequestFilters, useAuthStorage
+├── routes/           # AppRoutes, ProtectedRoute
+├── layouts/          # MainLayout, Navbar
+├── pages/            # Login, StudentDashboard, AdminDashboard, CreateRequest, RequestDetails, NotFound
+├── components/
+│   ├── common/       # SummaryCards, FilterBar, RequestCard, RequestList, RequestTable, LoadingSpinner, EmptyState, ErrorAlert
+│   ├── forms/        # CreateRequestForm, LoginForm (Formik + Yup)
+│   └── charts/       # CategoryBreakdown (Bootstrap progress bars, no chart library)
+├── validations/      # requestSchema, loginSchema (Yup)
+├── services/         # authService, requestService, categoryService (Axios wrappers)
+└── utils/            # statusColors, dateUtils
+```
+
+## Custom Hooks
+
+- **`useFetch(url, deps)`** — Generic GET hook returning `{ data, loading, error, refetch }`
+- **`useRequestFilters(requests, filters)`** — Search/category/status/priority filtering + sorting via `useMemo`
+- **`useAuthStorage()`** — `getStoredUser`/`setStoredUser`/`clearStoredUser` wrapping localStorage
+
+## useMemo Usage
+
+| Computation                         | Location                       |
+| ----------------------------------- | ------------------------------ |
+| Filtered/sorted request list        | `useRequestFilters`            |
+| Summary counts (Total/Open/Resolved)| `SummaryCards`                 |
+| High-priority open count            | `AdminDashboardPage`           |
+| Latest request                      | `StudentDashboardPage`         |
+| Category-wise counts                | `CategoryBreakdown`            |
+
+## Tech Stack
+
+React 19, Vite, React Router DOM, Context API, Axios, json-server, Bootstrap 5, Formik + Yup, localStorage.
