@@ -43,6 +43,4 @@ export default App
 EOF
 
 echo ""
-echo "Done! Running cd $FOLDER_NAME/react-app && npm run dev"
-
-cd ./$FOLDER_NAME/react-app && npm run dev
+echo "Done! Run cd $FOLDER_NAME/react-app && npm run dev"
