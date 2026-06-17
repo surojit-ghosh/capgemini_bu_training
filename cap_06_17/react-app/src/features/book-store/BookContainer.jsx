@@ -2,8 +2,8 @@ import { useSelector, useDispatch } from 'react-redux'
 import { purchase_book, update_book_name } from './BookAction'
 
 export default function BookContainer() {
-  const numOfBooks = useSelector(state => state.numOfBooks)
-  const bookName = useSelector(state => state.bookName)
+  const numOfBooks = useSelector(state => state.book.numOfBooks)
+  const bookName = useSelector(state => state.book.bookName)
   const d = useDispatch()
 
   return (

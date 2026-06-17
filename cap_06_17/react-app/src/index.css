@@ -5,3 +5,14 @@
   --font-sans: "Geist", system-ui, -apple-system, sans-serif;
   --font-display: "Syne", system-ui, -apple-system, sans-serif;
 }
+
+@layer base {
+  body {
+    background-color: #fafafa;
+    color: #52525b;
+    font-family: var(--font-sans);
+    font-size: 14px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+}

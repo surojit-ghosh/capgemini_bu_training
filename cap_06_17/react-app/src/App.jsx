@@ -1,12 +1,14 @@
-import BookContainer from './BasicRedux/BookContainer'
 import { Provider } from 'react-redux'
-import Store from './BasicRedux/Store'
+import ticketsStore from './features/support-tickets/ticketsStore'
+import SupportTickets from './features/support-tickets/SupportTickets'
 
 export default function App() {
   return (
-    <Provider store={Store}>
-      <div className="min-h-screen bg-gray-100 flex items-center justify-center">
-        <BookContainer />
+    <Provider store={ticketsStore}>
+      <div className="min-h-screen font-sans px-6 py-10">
+        <div className="max-w-6xl mx-auto">
+          <SupportTickets />
+        </div>
       </div>
     </Provider>
   )
