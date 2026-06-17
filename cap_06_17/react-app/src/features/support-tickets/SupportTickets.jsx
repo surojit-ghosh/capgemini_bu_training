@@ -115,7 +115,7 @@ function PriorityBadge({ priority }) {
 
 export default function SupportTickets() {
   const dispatch = useDispatch();
-  const { allTickets, selectedId, activeFilter } = useSelector(
+  const { allTickets, selectedTicketId, activeFilter } = useSelector(
     (s) => s.tickets,
   );
 
@@ -124,8 +124,8 @@ export default function SupportTickets() {
       ? allTickets
       : allTickets.filter((t) => t.status === activeFilter);
 
-  const selected = allTickets.find((t) => t.id === selectedId) || null;
-
+  const selected = allTickets.find((t) => t.id === selectedTicketId) || null;
+console.log(allTickets, selectedTicketId)
   const summary = {
     total: allTickets.length,
     open: allTickets.filter((t) => t.status === "Open").length,
@@ -205,7 +205,7 @@ export default function SupportTickets() {
                 <TicketRow
                   key={t.id}
                   ticket={t}
-                  isSelected={t.id === selectedId}
+                  isSelected={t.id === selectedTicketId}
                 />
               ))}
             </div>
