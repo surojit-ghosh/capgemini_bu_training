@@ -1,5 +1,5 @@
 import Badge from './Badge';
-import { formatDate } from '../utils';
+import { formatDate } from '../lib/utils';
 import { STATUSES } from '../lib/constants';
 
 export default function RequestTable({ requests, onStatusUpdate, onView }) {

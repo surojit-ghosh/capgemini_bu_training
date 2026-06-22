@@ -1,5 +1,5 @@
 import Badge from './Badge';
-import { formatDate } from '../utils';
+import { formatDate } from '../lib/utils';
 
 export default function RequestCard({ request, onClick }) {
   return (

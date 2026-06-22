@@ -1,5 +1,5 @@
 import { useFormik } from 'formik';
-import { loginSchema } from '../utils';
+import { loginSchema } from '../lib/utils';
 
 export default function LoginForm({ onSubmit, error }) {
   const formik = useFormik({

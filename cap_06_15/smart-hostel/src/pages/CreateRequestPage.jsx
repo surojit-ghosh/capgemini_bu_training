@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../lib/AuthContext';
 import { useFetch } from '../hooks/useFetch';
-import { createRequest } from '../services';
+import { createRequest } from '../lib/services';
 import { ROUTES } from '../lib/constants';
 import CreateRequestForm from '../components/CreateRequestForm';
 import Spinner from '../components/Spinner';

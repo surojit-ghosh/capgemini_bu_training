@@ -1,5 +1,5 @@
 import { useFormik } from 'formik';
-import { requestSchema } from '../utils';
+import { requestSchema } from '../lib/utils';
 import { PRIORITIES, STATUSES } from '../lib/constants';
 
 export default function CreateRequestForm({ categories, onSubmit, student }) {

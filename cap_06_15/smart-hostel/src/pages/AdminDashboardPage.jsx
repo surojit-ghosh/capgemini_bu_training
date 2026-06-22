@@ -2,7 +2,7 @@ import { useMemo, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useFetch } from '../hooks/useFetch';
 import { useRequestFilters } from '../hooks/useRequestFilters';
-import { updateRequestStatus } from '../services';
+import { updateRequestStatus } from '../lib/services';
 import { ROUTES, DEFAULT_FILTERS } from '../lib/constants';
 import SummaryCards from '../components/SummaryCards';
 import FilterBar from '../components/FilterBar';

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../lib/AuthContext';
-import { loginUser } from '../services';
+import { loginUser } from '../lib/services';
 import { ROUTES, ROLES } from '../lib/constants';
 import LoginForm from '../components/LoginForm';
 

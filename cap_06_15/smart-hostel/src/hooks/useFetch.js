@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from 'react';
-import api from '../services';
+import api from '../lib/services';
 
 export function useFetch(url, deps = []) {
   const [data, setData] = useState(null);

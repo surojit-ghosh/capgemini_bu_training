@@ -1,9 +1,9 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { useFetch } from "../hooks/useFetch";
 import { useAuth } from "../lib/AuthContext";
-import { updateRequestStatus } from "../services";
+import { updateRequestStatus } from "../lib/services";
 import { STATUSES, ROLES } from "../lib/constants";
-import { formatDate } from "../utils";
+import { formatDate } from "../lib/utils";
 import Badge from "../components/Badge";
 import Spinner from "../components/Spinner";
 import ErrorAlert from "../components/ErrorAlert";
