@@ -47,7 +47,7 @@
       "studentId": 2,
       "studentName": "Diya Patel",
       "priority": "Medium",
-      "status": "Open",
+      "status": "In Progress",
       "createdAt": "2026-06-13"
     },
     {
@@ -59,7 +59,7 @@
       "studentId": 2,
       "studentName": "Diya Patel",
       "priority": "Medium",
-      "status": "Resolved",
+      "status": "In Progress",
       "createdAt": "2026-06-10"
     },
     {
@@ -71,7 +71,7 @@
       "studentId": 1,
       "studentName": "Aarav Sharma",
       "priority": "High",
-      "status": "Open",
+      "status": "In Progress",
       "createdAt": "2026-06-13"
     },
     {
@@ -83,7 +83,7 @@
       "studentId": 1,
       "studentName": "Aarav Sharma",
       "priority": "Low",
-      "status": "Resolved",
+      "status": "In Progress",
       "createdAt": "2026-06-08"
     },
     {
@@ -95,8 +95,20 @@
       "studentId": 2,
       "studentName": "Diya Patel",
       "priority": "Low",
-      "status": "Open",
+      "status": "In Progress",
       "createdAt": "2026-06-14"
+    },
+    {
+      "title": "Food is too badd ",
+      "description": "Food is too badd ",
+      "category": "Cleaning",
+      "roomNo": "A-101",
+      "priority": "High",
+      "status": "In Progress",
+      "createdAt": "2026-06-22",
+      "studentId": 1,
+      "studentName": "Aarav Sharma",
+      "id": 7
     }
   ],
   "categories": [

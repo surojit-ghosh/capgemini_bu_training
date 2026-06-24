@@ -26,19 +26,17 @@ npm run dev
 
 ```
 src/
-├── api/              # Axios instance
-├── context/          # AuthContext, RequestContext
+├── lib/              # AuthContext, constants, services (Axios), utils (Yup schemas)
 ├── hooks/            # useFetch, useRequestFilters, useAuthStorage
-├── routes/           # AppRoutes, ProtectedRoute
-├── layouts/          # MainLayout, Navbar
-├── pages/            # Login, StudentDashboard, AdminDashboard, CreateRequest, RequestDetails, NotFound
-├── components/
-│   ├── common/       # SummaryCards, FilterBar, RequestCard, RequestList, RequestTable, LoadingSpinner, EmptyState, ErrorAlert
-│   ├── forms/        # CreateRequestForm, LoginForm (Formik + Yup)
-│   └── charts/       # CategoryBreakdown (Bootstrap progress bars, no chart library)
-├── validations/      # requestSchema, loginSchema (Yup)
-├── services/         # authService, requestService, categoryService (Axios wrappers)
-└── utils/            # statusColors, dateUtils
+├── components/       # Badge, CategoryBreakdown, CreateRequestForm, ErrorAlert, FilterBar,
+│                     # LoginForm, MainLayout, Navbar, RequestCard, RequestList, RequestTable,
+│                     # Spinner, SummaryCards
+├── pages/            # LoginPage, StudentDashboardPage, AdminDashboardPage,
+│                     # CreateRequestPage, RequestDetailsPage, NotFoundPage
+├── App.jsx           # BrowserRouter + AuthProvider wrapper
+├── routes.jsx        # AppRoutes + ProtectedRoute
+├── main.jsx          # ReactDOM entry
+└── index.css         # Tailwind v4 imports + base styles
 ```
 
 ## Custom Hooks
@@ -59,4 +57,4 @@ src/
 
 ## Tech Stack
 
-React 19, Vite, React Router DOM, Context API, Axios, json-server, Bootstrap 5, Formik + Yup, localStorage.
+React 19, Vite, React Router DOM, Context API, Axios, json-server, Tailwind CSS v4, Formik + Yup, localStorage.

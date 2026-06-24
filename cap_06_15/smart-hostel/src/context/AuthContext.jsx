@@ -1,5 +1,5 @@
-import { createContext, useContext, useState } from 'react';
-import { useAuthStorage } from '../hooks/useAuthStorage';
+import { createContext, useContext, useState } from "react";
+import { useAuthStorage } from "../hooks/useAuthStorage";
 
 const AuthContext = createContext(null);
 
@@ -18,7 +18,9 @@ export function AuthProvider({ children }) {
   };
 
   return (
-    <AuthContext.Provider value={{ user, isAuthenticated: !!user, login, logout }}>
+    <AuthContext.Provider
+      value={{ user, isAuthenticated: !!user, login, logout }}
+    >
       {children}
     </AuthContext.Provider>
   );
@@ -26,6 +28,6 @@ export function AuthProvider({ children }) {
 
 export function useAuth() {
   const ctx = useContext(AuthContext);
-  if (!ctx) throw new Error('useAuth must be used within AuthProvider');
+  if (!ctx) throw new Error("useAuth must be used within AuthProvider");
   return ctx;
 }

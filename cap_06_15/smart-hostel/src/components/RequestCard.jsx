@@ -12,7 +12,7 @@ export default function RequestCard({ request, onClick }) {
     >
       <div className="flex items-start justify-between gap-2">
         <h6 className="font-medium text-xs text-neutral-950 line-clamp-2 leading-tight">{request.title}</h6>
-        <Badge type="priority" value={request.priority} />
+        <Badge value={request.priority} />
       </div>
 
       <div className="flex items-center flex-wrap gap-x-2 gap-y-1 text-[11px] text-neutral-500">
@@ -28,7 +28,7 @@ export default function RequestCard({ request, onClick }) {
       </div>
 
       <div className="flex items-center justify-between border-t border-neutral-100 pt-2.5 mt-1">
-        <Badge type="status" value={request.status} />
+        <Badge value={request.status} />
         <span className="text-[10px] text-neutral-400">{formatDate(request.createdAt)}</span>
       </div>
     </div>

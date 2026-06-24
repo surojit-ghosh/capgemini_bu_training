@@ -1,11 +1,11 @@
 import { useMemo } from 'react';
 
-const BAR_COLORS = [
-  '#18181b',
-  '#3f3f46',
-  '#71717a',
-  '#a1a1aa',
-  '#d4d4d8',
+const BAR_CLASSES = [
+  'bg-zinc-900',
+  'bg-zinc-700',
+  'bg-zinc-500',
+  'bg-zinc-400',
+  'bg-zinc-300',
 ];
 
 export default function CategoryBreakdown({ requests }) {
@@ -21,7 +21,7 @@ export default function CategoryBreakdown({ requests }) {
         category,
         count,
         pct: Math.round((count / total) * 100),
-        color: BAR_COLORS[i % BAR_COLORS.length],
+        barClass: BAR_CLASSES[i % BAR_CLASSES.length],
       }));
   }, [requests]);
 
@@ -40,8 +40,8 @@ export default function CategoryBreakdown({ requests }) {
           </div>
           <div className="h-1.5 bg-neutral-100 rounded-full overflow-hidden">
             <div
-              className="h-full rounded-full transition-all duration-500"
-              style={{ width: `${item.pct}%`, backgroundColor: item.color }}
+              className={`h-full rounded-full transition-all duration-500 ${item.barClass}`}
+              style={{ width: `${item.pct}%` }}
             />
           </div>
         </div>

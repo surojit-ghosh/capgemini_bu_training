@@ -1,13 +1,13 @@
-import { Routes, Route, Navigate } from "react-router-dom";
-import { useAuth } from "./lib/AuthContext";
-import { ROUTES, ROLES } from "./lib/constants";
-import MainLayout from "./components/MainLayout";
-import LoginPage from "./pages/LoginPage";
-import StudentDashboardPage from "./pages/StudentDashboardPage";
-import AdminDashboardPage from "./pages/AdminDashboardPage";
-import CreateRequestPage from "./pages/CreateRequestPage";
-import RequestDetailsPage from "./pages/RequestDetailsPage";
-import NotFoundPage from "./pages/NotFoundPage";
+import { Routes, Route, Navigate } from 'react-router-dom';
+import { useAuth } from './context/AuthContext';
+import { ROUTES, ROLES } from './lib/constants';
+import MainLayout from './components/MainLayout';
+import LoginPage from './pages/LoginPage';
+import StudentDashboardPage from './pages/StudentDashboardPage';
+import AdminDashboardPage from './pages/AdminDashboardPage';
+import CreateRequestPage from './pages/CreateRequestPage';
+import RequestDetailsPage from './pages/RequestDetailsPage';
+import NotFoundPage from './pages/NotFoundPage';
 
 export function ProtectedRoute({ children, allowedRoles }) {
   const { user, isAuthenticated } = useAuth();
@@ -61,11 +61,11 @@ export default function AppRoutes() {
             </ProtectedRoute>
           }
         />
-        <Route path="/request/:id" element={<RequestDetailsPage />} />
+        <Route path='/request/:id' element={<RequestDetailsPage />} />
       </Route>
 
-      <Route path="/" element={<Navigate to={ROUTES.LOGIN} replace />} />
-      <Route path="*" element={<NotFoundPage />} />
+      <Route path='/' element={<Navigate to={ROUTES.LOGIN} replace />} />
+      <Route path='*' element={<NotFoundPage />} />
     </Routes>
   );
 }

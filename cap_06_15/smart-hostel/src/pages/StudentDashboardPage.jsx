@@ -1,12 +1,12 @@
 import { useMemo, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useAuth } from '../lib/AuthContext';
+import { useAuth } from '../context/AuthContext';
 import { useFetch } from '../hooks/useFetch';
 import { useRequestFilters } from '../hooks/useRequestFilters';
 import { ROUTES, DEFAULT_FILTERS } from '../lib/constants';
 import SummaryCards from '../components/SummaryCards';
 import FilterBar from '../components/FilterBar';
-import RequestList from '../components/RequestList';
+import RequestCard from '../components/RequestCard';
 import CategoryBreakdown from '../components/CategoryBreakdown';
 import Spinner from '../components/Spinner';
 import ErrorAlert from '../components/ErrorAlert';
@@ -92,10 +92,18 @@ export default function StudentDashboardPage() {
         onFilterChange={setFilters}
         categories={categories || []}
       />
-      <RequestList
-        requests={filteredRequests}
-        onRequestClick={(id) => navigate(ROUTES.REQUEST_DETAIL(id))}
-      />
+      {filteredRequests.length === 0 ? (
+        <div className='text-center py-12 border border-dashed border-neutral-200 rounded text-neutral-500 font-sans'>
+          <div className='text-sm font-semibold text-neutral-900 mb-1'>No requests found</div>
+          <div className='text-xs text-neutral-500'>Try adjusting your filters or raise a new request.</div>
+        </div>
+      ) : (
+        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4'>
+          {filteredRequests.map((req) => (
+            <RequestCard key={req.id} request={req} onClick={(id) => navigate(ROUTES.REQUEST_DETAIL(id))} />
+          ))}
+        </div>
+      )}
     </div>
   );
 }

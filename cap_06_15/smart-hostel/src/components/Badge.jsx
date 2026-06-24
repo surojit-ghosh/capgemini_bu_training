@@ -1,14 +1,14 @@
-export default function Badge({ type, value }) {
+export default function Badge({ value }) {
   if (!value) return null;
 
   let cls = 'inline-flex items-center text-[10px] font-medium tracking-wider uppercase px-2 py-0.5 rounded border ';
 
   if (value === 'High' || value === 'Open') {
-    cls += 'bg-neutral-900 text-neutral-50 border-neutral-900';
+    cls += 'bg-red-50 text-red-700 border-red-200';
   } else if (value === 'Medium' || value === 'In Progress') {
-    cls += 'bg-neutral-100 text-neutral-800 border-neutral-300';
+    cls += 'bg-amber-50 text-amber-700 border-amber-200';
   } else {
-    cls += 'bg-neutral-50 text-neutral-400 border-neutral-200';
+    cls += 'bg-emerald-50 text-emerald-700 border-emerald-200';
   }
 
   return <span className={cls}>{value}</span>;

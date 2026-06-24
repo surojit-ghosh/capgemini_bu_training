@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useAuth } from '../lib/AuthContext';
+import { useAuth } from '../context/AuthContext';
 import { loginUser } from '../lib/services';
 import { ROUTES, ROLES } from '../lib/constants';
 import LoginForm from '../components/LoginForm';
@@ -27,7 +27,7 @@ export default function LoginPage() {
 
   return (
     <div className="min-h-screen flex items-center justify-center p-6 bg-neutral-50 font-sans">
-      <div className="w-full max-w-[360px] bg-white border border-neutral-200 rounded p-8">
+      <div className="w-full max-w-90 bg-white border border-neutral-200 rounded p-8">
         <div className="flex flex-col items-center justify-center mb-8 font-display">
           <div className="font-extrabold text-base text-neutral-900 uppercase tracking-widest leading-none">Smart Hostel</div>
           <div className="text-[9px] font-medium text-neutral-400 uppercase tracking-widest mt-2">Maintenance Portal</div>

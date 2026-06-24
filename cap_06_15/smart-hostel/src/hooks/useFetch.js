@@ -1,18 +1,13 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect } from 'react';
 import api from '../lib/services';
 
 export function useFetch(url, deps = []) {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [refetchKey, setRefetchKey] = useState(0);
 
-  const refetch = useCallback(() => {
-    setError(null);
-    api
-      .get(url)
-      .then((res) => setData(res.data))
-      .catch((err) => setError(err.message || 'Something went wrong'));
-  }, [url]);
+  const refetch = () => setRefetchKey((k) => k + 1);
 
   useEffect(() => {
     let cancelled = false;
@@ -26,7 +21,7 @@ export function useFetch(url, deps = []) {
       .finally(() => { if (!cancelled) setLoading(false); });
 
     return () => { cancelled = true; };
-  }, [url, ...deps]);
+  }, [url, refetchKey, ...deps]);
 
   return { data, loading, error, refetch };
 }
