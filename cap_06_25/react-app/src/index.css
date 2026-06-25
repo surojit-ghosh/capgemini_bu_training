@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Syne:wght@400;500;600;700&display=swap");
+
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Geist", system-ui, -apple-system, sans-serif;
+  --font-display: "Syne", system-ui, -apple-system, sans-serif;
+}
+
+body {
+  background-color: #fafafa;
+  color: #52525b;
+  font-family: var(--font-sans);
+}
