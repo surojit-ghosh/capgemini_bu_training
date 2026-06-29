@@ -1,0 +1,19 @@
+{
+  "nationalheroes": [
+    {
+      "id": 1,
+      "name": "Bhagat",
+      "pride": "Freedom Fighter"
+    },
+    {
+      "id": 1,
+      "name": "Tilak",
+      "pride": "Lokmanya Leader"
+    },
+    {
+      "id": 1,
+      "name": "SubhasChandraBose",
+      "pride": "Netaji"
+    }
+  ]
+}
