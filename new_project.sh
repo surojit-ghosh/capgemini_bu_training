@@ -33,7 +33,7 @@ EOF
 echo '@import "tailwindcss";' > src/index.css
 
 # Clean up boilerplate
-rm -rf src/assets src/App.css
+rm -rf src/assets src/App.css public/icons.svg public/favicon.svg
 cat > src/App.jsx << 'EOF'
 function App() {
   return <h1 className="text-3xl font-bold underline">Hello world</h1>
