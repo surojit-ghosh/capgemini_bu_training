@@ -1,0 +1,74 @@
+{
+  "courses": [
+    {
+      "id": 1,
+      "title": "React Advanced",
+      "instructor": "Surojit Ghosh",
+      "duration": "6 weeks",
+      "level": "Advanced"
+    },
+    {
+      "id": 2,
+      "title": "React Fundamentals",
+      "instructor": "Chandrima Basuri",
+      "duration": "8 weeks",
+      "level": "Intermediate"
+    },
+    {
+      "id": 3,
+      "title": "Node.js Fundamentals",
+      "instructor": "Faisal",
+      "duration": "5 weeks",
+      "level": "Intermediate"
+    },
+    {
+      "id": 4,
+      "title": "Backend",
+      "instructor": "Ria Dutta",
+      "duration": "4 weeks",
+      "level": "Intermediate"
+    },
+    {
+      "id": 5,
+      "title": "Advanced JavaScript",
+      "instructor": "Kalpak",
+      "duration": "6 weeks",
+      "level": "Intermediate"
+    },
+    {
+      "id": 6,
+      "title": "TypeScript",
+      "instructor": "Roshmita",
+      "duration": "5 weeks",
+      "level": "Beginner"
+    },
+    {
+      "id": 7,
+      "title": "SpringBoot",
+      "instructor": "Anirban",
+      "duration": "7 weeks",
+      "level": "Advanced"
+    },
+    {
+      "id": 8,
+      "title": "AIML",
+      "instructor": "Satadru Jati",
+      "duration": "4 weeks",
+      "level": "Beginner"
+    },
+    {
+      "id": 9,
+      "title": "CyberSecurity",
+      "instructor": "Jyotiraditya Pal",
+      "duration": "8 weeks",
+      "level": "Advanced"
+    },
+    {
+      "id": 10,
+      "title": "Cloud Computing",
+      "instructor": "Pushkar Ghosh",
+      "duration": "6 weeks",
+      "level": "Advanced"
+    }
+  ]
+}

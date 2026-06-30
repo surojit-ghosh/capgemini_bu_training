@@ -1,6 +1,5 @@
 import { NavLink, Route, Routes } from 'react-router-dom'
-import Home from './features/home/Home'
-import RQNationalHeroes from './features/national-heroes/RQNationalHeroes'
+import Courses from './features/courses/Courses'
 
 const navLinkClass = ({ isActive }) =>
   `rounded-md px-4 py-2 text-sm font-medium transition ${
@@ -13,25 +12,21 @@ function App() {
   return (
     <div className="min-h-screen bg-canvas text-ink">
       <nav className="bg-sidebar-bg text-sidebar-text shadow-sidebar">
-        <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
+        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
           <h1 className="font-display text-lg font-extrabold tracking-[-0.03em]">
             React App
           </h1>
           <div className="flex items-center gap-2">
             <NavLink to="/" className={navLinkClass}>
-              Home
-            </NavLink>
-            <NavLink to="/national-heroes" className={navLinkClass}>
-              National Heroes
+              Courses
             </NavLink>
           </div>
         </div>
       </nav>
 
-      <main className="mx-auto max-w-5xl px-6 py-10">
+      <main className="mx-auto max-w-6xl px-6 py-10">
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/national-heroes" element={<RQNationalHeroes />} />
+          <Route path="/" element={<Courses />} />
         </Routes>
       </main>
     </div>
