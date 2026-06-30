@@ -2,73 +2,73 @@
   "courses": [
     {
       "id": 1,
-      "title": "React Advanced",
-      "instructor": "Surojit Ghosh",
-      "duration": "6 weeks",
+      "title": "AI/ML",
+      "instructor": "Satadru Jati",
+      "duration": "8 weeks",
       "level": "Advanced"
     },
     {
       "id": 2,
-      "title": "React Fundamentals",
-      "instructor": "Chandrima Basuri",
+      "title": "React",
+      "instructor": "Subarna Basak",
       "duration": "8 weeks",
-      "level": "Intermediate"
+      "level": "Advanced"
     },
     {
       "id": 3,
-      "title": "Node.js Fundamentals",
-      "instructor": "Faisal",
-      "duration": "5 weeks",
-      "level": "Intermediate"
+      "title": "Spring Boot",
+      "instructor": "Surojit Ghosh",
+      "duration": "8 weeks",
+      "level": "Advanced"
     },
     {
       "id": 4,
-      "title": "Backend",
-      "instructor": "Ria Dutta",
-      "duration": "4 weeks",
-      "level": "Intermediate"
+      "title": "Node.js",
+      "instructor": "Anirban Rout",
+      "duration": "7 weeks",
+      "level": "Advanced"
     },
     {
       "id": 5,
-      "title": "Advanced JavaScript",
-      "instructor": "Kalpak",
+      "title": "Java Microservices",
+      "instructor": "Aniruddha Kumar Dutta",
       "duration": "6 weeks",
       "level": "Intermediate"
     },
     {
       "id": 6,
-      "title": "TypeScript",
-      "instructor": "Roshmita",
+      "title": "Cybersecurity",
+      "instructor": "Virat Kohli",
       "duration": "5 weeks",
-      "level": "Beginner"
+      "level": "Advanced"
     },
     {
       "id": 7,
-      "title": "SpringBoot",
-      "instructor": "Anirban",
-      "duration": "7 weeks",
+      "title": "Cloud Computing",
+      "instructor": "Lionel Messi",
+      "duration": "5 weeks",
       "level": "Advanced"
     },
     {
       "id": 8,
-      "title": "AIML",
-      "instructor": "Satadru Jati",
-      "duration": "4 weeks",
-      "level": "Beginner"
+      "title": "Data Structures",
+      "instructor": "Pedri",
+      "duration": "6 weeks",
+      "level": "Intermediate"
     },
     {
       "id": 9,
-      "title": "CyberSecurity",
-      "instructor": "Jyotiraditya Pal",
-      "duration": "8 weeks",
-      "level": "Advanced"
+      "title": "Full Stack Development",
+      "instructor": "Lamine Yamal",
+      "duration": "5 weeks",
+      "level": "Beginner"
     },
     {
-      "id": 10,
-      "title": "Cloud Computing",
-      "instructor": "Pushkar Ghosh",
-      "duration": "6 weeks",
-      "level": "Advanced"
+      "title": "a",
+      "instructor": "a",
+      "duration": "a",
+      "level": "Advanced",
+      "id": 10
     }
   ]
 }
